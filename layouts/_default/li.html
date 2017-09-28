@@ -5,7 +5,9 @@
     </header>
     
     <section class="post-excerpt">
-        <p>{{ .Summary }}</p>
+        <p>
+        {{ with .Params.featured_image }}<img src="{{ . }}">{{ end }}
+        {{ .Summary }}</p>
     </section>
 
     <footer class="post-footer">
