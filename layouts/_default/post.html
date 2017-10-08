@@ -17,7 +17,7 @@
             </section>
             {{ else if isset .Site.Params "author" }}
             <section class="author">
-                <p> {{ index .Site.Params "author" }}</p>
+              <p> BY <a href="/about" title="About"> {{ index .Site.Params "author" }} </a> </p>
             </section>
             {{ end }}
             
