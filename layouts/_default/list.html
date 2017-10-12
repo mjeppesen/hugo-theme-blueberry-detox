@@ -11,9 +11,20 @@
 {{ partial "header.html" . }}
 <main class="content" role="main">
 	<div class="container">
+
+<article class="li post">
+    <header class="post-header">
+        <h5 class="post-title"><a href="{{ .Site.BaseURL }}archive">List of old posts</a>
+        &nbsp | &nbsp <a href="{{ .Site.BaseURL }}about">About me</a></h5>
+    </header>
+</article>
+
+
 	{{ range .Paginator.Pages }}
    {{ if ne .Title "About" }}
+   {{ if ne .Title "Archive" }}
 		{{ .Render "li" }}
+    {{ end }}
     {{ end }}
 	{{ end }}
 	{{ partial "pagination.html" . }}
