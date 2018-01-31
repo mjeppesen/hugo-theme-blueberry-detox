@@ -5,11 +5,13 @@
 
     <section class="post-content">
         {{ .Content }}
+        <hr>
+        {{ partial "related.html" . }}
+        <a href="{{ .Site.BaseURL }}">Back to the home page</a>
     </section>
 
-    <hr>
-
     <footer class="post-footer">
+
         <section class="f-1">
             {{ if isset .Params "author" }}
             <section class="author">
